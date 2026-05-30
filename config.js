@@ -177,6 +177,23 @@ creative approach, production details.`,
     },
 
     {
+      id:          "dell",
+      title:       "Dell - Cyber Attack",
+      category:    "animation",
+      thumbnail:   "",
+      thumbColor:  "#c2b8c9",
+      heroImage:   "",
+      videoUrl:    "https://player.vimeo.com/video/000000005",
+      description: `A campaign of 3 films for Dell.`,
+      details: [
+        { label: "Role",   value: "Director, Animator" },
+        { label: "Year",   value: "2022" },
+        { label: "Client", value: "Zelos" },
+        { label: "Tools",  value: "After Effects, Illustrator" },
+      ],
+    },
+
+    {
       id:          "illustration-01",
       title:       "Editorial Series",
       category:    "illustration",
