@@ -17,9 +17,9 @@ const CONFIG = {
   //  Set the exact font name as it appears on Google Fonts
   // ----------------------------------------------------------
   fonts: {
-    display: "Montserrat",   // Used for your logo/name
+    display: "Cormorant Garamond",   // Used for your logo/name
     body:    "Outfit",               // Used for nav, labels, body text
-    displayWeight: 600,              // 300 = light, 400 = regular, 700 = bold
+    displayWeight: 300,              // 300 = light, 400 = regular, 700 = bold
     bodyWeight:    400,
   },
 
