@@ -217,9 +217,9 @@ img { display: block; width: 100%; }
 .project-detail-back::before { content: "←"; }
 
 .project-detail-title {
-  font-family: var(--font-display);
+  font-family: 'DynaPuff';
   font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: var(--font-display-weight, 1200);
+  font-weight: 400;
   letter-spacing: 0.02em;
   margin-bottom: 2.5rem;
   line-height: 1.15;
