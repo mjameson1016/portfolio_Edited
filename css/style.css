@@ -219,7 +219,7 @@ img { display: block; width: 100%; }
 .project-detail-title {
   font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: var(--font-display-weight, 300);
+  font-weight: var(--font-display-weight, 1200);
   letter-spacing: 0.02em;
   margin-bottom: 2.5rem;
   line-height: 1.15;
