@@ -197,6 +197,38 @@ img { display: block; width: 100%; }
   border-bottom: 1px solid var(--color-text);
 }
 
+/* ---- About layout ---- */
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  padding: 5rem 0;
+}
+.about-layout h1 {
+  grid-column: 1 / -1;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: var(--font-display-weight, 300);
+  letter-spacing: 0.02em;
+  margin-bottom: 1rem;
+}
+.about-layout img {
+  width: 100%;
+}
+.about-layout p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-muted);
+  margin-bottom: 1.25rem;
+}
+@media (max-width: 640px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
 /* ---- Project Detail Page ---- */
 .project-detail {
   padding: 3.5rem 0 6rem;
@@ -340,4 +372,5 @@ img { display: block; width: 100%; }
   .site-nav { gap: 1.2rem; }
   .project-grid { grid-template-columns: 1fr 1fr; gap: 2px; }
   .site-wrap { padding: 0 1.2rem; }
+  .about-layout { grid-template-columns: 1fr; gap: 2rem; }
 }
