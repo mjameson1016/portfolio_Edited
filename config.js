@@ -75,7 +75,7 @@ I'm an animator, illustrator, and director living in Texas with my beautiful wif
 
 I would love to chat with you about working together: hello@mattjameson.co`,
 
-    photo: "",   // Optional: "images/about-photo.jpg"
+    photo: "images/About_Headshot.jpg",   // Optional: "images/about-photo.jpg"
   },
 
   // ----------------------------------------------------------
