@@ -83,8 +83,8 @@ I would love to chat with you about working together: hello@mattjameson.co`,
   // ----------------------------------------------------------
   contact: {
     heading: "Get in touch",
-    email:   "hello@yourname.com",
-    message: "Available for freelance and commissions.",
+    email:   "hello@mattjameson.co",
+    message: "If you would like to discuss an idea or a project, or you just simply want to say hello, feel free to contact me.",
   },
 
   // ----------------------------------------------------------
