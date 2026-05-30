@@ -70,7 +70,7 @@ const CONFIG = {
     bio: `Your bio goes here. Write a few sentences about yourself,
 your background, the kind of work you do, and what drives you.
 This can be as long or short as you like.`,
-    photo: "",   // Optional: "images/about-photo.jpg"
+    photo: "images/About_Headshot.jpg",   // Optional: "images/about-photo.jpg"
   },
 
   // ----------------------------------------------------------
