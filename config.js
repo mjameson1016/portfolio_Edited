@@ -19,7 +19,7 @@ const CONFIG = {
   fonts: {
     display: "Montserrat",   // Used for your logo/name
     body:    "Outfit",               // Used for nav, labels, body text
-    displayWeight: 500,              // 300 = light, 400 = regular, 700 = bold
+    displayWeight: 400,              // 300 = light, 400 = regular, 700 = bold
     bodyWeight:    400,
   },
 
