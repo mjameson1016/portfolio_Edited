@@ -146,7 +146,7 @@
     let mediaHtml = '';
     if (project.videoUrl) {
       mediaHtml = `<div class="project-detail-media">
-        <iframe src="${project.videoUrl}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="${project.videoUrl}" style="aspect-ratio: ${project.aspectRatio || '16 / 9'}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
       </div>`;
     } else if (project.heroImage) {
       mediaHtml = `<div class="project-detail-media">

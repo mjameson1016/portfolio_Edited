@@ -233,7 +233,6 @@ img { display: block; width: 100%; }
 
 .project-detail-media iframe {
   width: 100%;
-  aspect-ratio: 16 / 9;
   border: none;
   display: block;
 }
