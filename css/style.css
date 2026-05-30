@@ -223,6 +223,7 @@ img { display: block; width: 100%; }
   letter-spacing: 0.02em;
   margin-bottom: 2.5rem;
   line-height: 1.15;
+  font-style: italic;
 }
 
 .project-detail-media {
