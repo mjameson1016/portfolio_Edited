@@ -92,19 +92,18 @@
   }
 
   function buildAbout() {
-  const el = document.getElementById('about-section');
-  if (!el) return;
-  const a = CONFIG.about;
-  const photo = a.photo ? `<img src="${a.photo}" alt="About">` : '';
-  const text = a.bio.split('\n').filter(l=>l.trim()).map(l=>`<p>${l}</p>`).join('');
-  el.innerHTML = `
-    <div class="about-layout">
-      <h1>${a.heading}</h1>
-      <div class="about-image">${photo}</div>
-      <div class="about-text">${text}</div>
-    </div>`;
-  document.getElementById('about-container').classList.remove('hidden');
-}
+    const el = document.getElementById('about-section');
+    if (!el) return;
+    const a = CONFIG.about;
+    const photo = a.photo ? `<img class="about-photo" src="${a.photo}" alt="About">` : '';
+    el.innerHTML = `
+      <div class="page-section">
+        <h1>${a.heading}</h1>
+        ${photo}
+        ${a.bio.split('\n').filter(l=>l.trim()).map(l=>`<p>${l}</p>`).join('')}
+      </div>`;
+    document.getElementById('about-container').classList.remove('hidden');
+  }
 
   function buildContact() {
     const el = document.getElementById('contact-section');

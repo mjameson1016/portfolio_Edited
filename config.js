@@ -67,27 +67,10 @@ const CONFIG = {
   // ----------------------------------------------------------
   about: {
     heading: "About",
-    bio: 
-
-`Hi, I'm Matt Jameson.
-
-I'm an animator, illustrator, and director living in Texas with my beautiful wife and daughters. To sum myself up, I am passionate about finding stories and telling them through moving illustrations. I also enjoy music, films, good friends, good food, and football. 
-
-I would love to chat with you about working together: hello@mattjameson.co
-
-_________________
-
-Studios I’ve had the pleasure of working with include: 
-
-Buck, Oddfellows, Laundry, IV Animation, Colin Hesterly, Remade, Trifilm, Eido, Dash, Partizan, and others.
-
-_________________
-
-Brands I’ve had the pleasure of working with include: 
-
-Google, Facebook, Amazon, Apple, Microsoft, Target, Dell, VH1, Cisco, eBay, and others.`,
-
-    photo: "images/About_Headshot.jpg",   // Optional: "images/about-photo.jpg"
+    bio: `Your bio goes here. Write a few sentences about yourself,
+your background, the kind of work you do, and what drives you.
+This can be as long or short as you like.`,
+    photo: "",   // Optional: "images/about-photo.jpg"
   },
 
   // ----------------------------------------------------------
