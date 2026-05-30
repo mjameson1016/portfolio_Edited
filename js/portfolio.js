@@ -145,14 +145,17 @@
     // Media
     let mediaHtml = '';
     if (project.videoUrl) {
-      mediaHtml = `<div class="project-detail-media">
-        <iframe src="${project.videoUrl}" style="aspect-ratio: ${project.aspectRatio || '16 / 9'}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      </div>`;
-    } else if (project.heroImage) {
-      mediaHtml = `<div class="project-detail-media">
-        <img src="${project.heroImage}" alt="${project.title}">
-      </div>`;
-    }
+  mediaHtml = `<div class="project-detail-media">
+    <iframe src="${project.videoUrl}" style="aspect-ratio: ${project.aspectRatio || '16 / 9'}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  </div>`;
+
+  if (project.extraVideos && project.extraVideos.length) {
+    mediaHtml += project.extraVideos.map(url => `
+      <div class="project-detail-media" style="margin-top: 1.5rem;">
+        <iframe src="${url}" style="aspect-ratio: ${project.aspectRatio || '16 / 9'}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>`).join('');
+  }
+}
 
     // Description
     const desc = project.description.split('\n').filter(l=>l.trim())

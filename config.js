@@ -57,7 +57,7 @@ const CONFIG = {
   //  FOOTER LINKS
   // ----------------------------------------------------------
   footer: [
-    { label: "hello@ymattjameson.co", href: "mailto:hello@mattjameson.co" },
+    { label: "hello@mattjameson.co", href: "mailto:hello@mattjameson.co" },
     { label: "Instagram",          href: "https://instagram.com/matthewdjameson" },
     { label: "Vimeo",              href: "https://vimeo.com/mattjameson" },
   ],
@@ -173,6 +173,9 @@ creative approach, production details.`,
       thumbColor:  "#c2b8c9",
       heroImage:   "",
       videoUrl:    "https://player.vimeo.com/video/377357796",
+      extraVideos: [
+    "https://player.vimeo.com/video/377359118",
+  ],
       description: `Motion work for the Google Pixel 4 launch campaign.`,
       details: [
         { label: "Role",   value: "Motion Designer" },
@@ -200,23 +203,27 @@ creative approach, production details.`,
       ],
     },
 
-    {
-      id:          "dell",
-      title:       "Dell - Cyber Attack",
-      aspectRatio: "16 / 9",
-      category:    "animation",
-      thumbnail:   "images/Dell_Thumb.jpg",
-      thumbColor:  "#c9c5be",
-      heroImage:   "",
-      videoUrl:    "https://player.vimeo.com/video/377362133",
-      description: `A campaign of 3 films for Dell.`,
-      details: [
-        { label: "Role",   value: "Animator" },
-        { label: "Year",   value: "2022" },
-        { label: "Client", value: "Dell" },
-        { label: "Tools",  value: "After Effects" },
-      ],
-    },
+{
+  id:          "dell",
+  title:       "Dell - Cyber Attack",
+  aspectRatio: "16 / 9",
+  category:    "animation",
+  thumbnail:   "images/Dell_Thumb.jpg",
+  thumbColor:  "#c9c5be",
+  heroImage:   "",
+  videoUrl:    "https://player.vimeo.com/video/377362133",
+  extraVideos: [
+    "https://player.vimeo.com/video/377362882",
+    "https://player.vimeo.com/video/377363262",
+  ],
+  description: `A campaign of 3 films for Dell.`,
+  details: [
+    { label: "Role",   value: "Animator" },
+    { label: "Year",   value: "2022" },
+    { label: "Client", value: "Dell" },
+    { label: "Tools",  value: "After Effects" },
+  ],
+},
 
     {
       id:          "illustration-01",
