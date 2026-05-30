@@ -24,7 +24,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: url('../images/Website_BG.png');
+  background-image: url('/portfolio_Edited/images/Website_BG.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
