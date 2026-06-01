@@ -46,7 +46,7 @@
         <div class="site-logo">
   <a href="index.html">
     ${CONFIG.logoImage
-      ? `<img src="${CONFIG.logoImage}" alt="${CONFIG.logoText}" style="height: 80px; width: auto; display: block;">`
+      ? `<img src="${CONFIG.logoImage}" alt="${CONFIG.logoText}" class="logo-img" style="width: auto; display: block;">`
       : CONFIG.logoText}
   </a>
 </div>
@@ -65,8 +65,10 @@
     const footer = document.getElementById('site-footer');
     if (!footer) return;
     const links = CONFIG.footer.map(f =>
-      `<a href="${f.href}" target="_blank" rel="noopener">${f.label}</a>`
-    ).join('');
+  `<a href="${f.href}" target="_blank" rel="noopener" aria-label="${f.label}">
+     <i class="${f.icon}"></i>
+   </a>`
+   ).join('');
     footer.innerHTML = `<div class="site-wrap">${links}</div>`;
   }
 
@@ -78,15 +80,25 @@
       : CONFIG.projects;
     grid.innerHTML = projects.map(p => {
       const media = p.thumbnail
-        ? `<img class="project-tile-img" src="${p.thumbnail}" alt="${p.title}">`
+        ? `<img
+  class="project-tile-img"
+  src="${p.thumbnail}"
+  alt="${p.title}"
+  style="object-position:${p.thumbPosition || 'center center'};"
+>`
         : `<div class="project-tile-placeholder" style="background:${p.thumbColor||'#ccc'}"></div>`;
-      return `
-        <a class="project-tile" href="work.html?id=${p.id}">
-          ${media}
-          <div class="project-tile-overlay">
-            <span class="project-tile-label">${p.title}</span>
-          </div>
-        </a>`;
+const tileTag = p.category === 'illustration' ? 'div' : 'a';
+const tileAttrs = p.category === 'illustration'
+  ? `class="project-tile illustration-tile" data-image="${p.heroImage || p.thumbnail}"`
+  : `class="project-tile" href="work.html?id=${p.id}"`;
+
+return `
+  <${tileTag} ${tileAttrs}>
+    ${media}
+    <div class="project-tile-overlay">
+      <span class="project-tile-label">${p.title}</span>
+    </div>
+  </${tileTag}>`;
     }).join('');
     document.getElementById('grid-container').classList.remove('hidden');
   }
@@ -195,13 +207,35 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    loadFonts();
-    applyConfig();
-    buildFooter();
-    setTitle();
-    const page = document.body.dataset.page;
-    if (page === 'index') routeIndex();
-    if (page === 'work')  buildWorkPage();
+  loadFonts();
+  applyConfig();
+  buildFooter();
+  setTitle();
+
+  const page = document.body.dataset.page;
+  if (page === 'index') routeIndex();
+  if (page === 'work')  buildWorkPage();
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightbox-image');
+
+  document.addEventListener('click', (e) => {
+    const tile = e.target.closest('.illustration-tile');
+    if (!tile || !lightbox) return;
+
+    lightboxImage.src = tile.dataset.image;
+    lightbox.classList.remove('hidden');
   });
+
+  lightbox?.addEventListener('click', () => {
+    lightbox.classList.add('hidden');
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      lightbox?.classList.add('hidden');
+    }
+  });
+});
 
 })();
