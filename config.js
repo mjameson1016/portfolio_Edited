@@ -140,6 +140,8 @@ I would love to chat with you about working together: <a href="mailto:hello@matt
       thumbColor:  "#c9c5be",
       heroImage:   "",
       videoUrl:    "https://player.vimeo.com/video/945966084",
+      extraVideos: ["https://player.vimeo.com/video/945966395",
+      ],
       description: `This project began as a creative exploration of a story involving a scientist and a robot, and soon evolved into the opportunity to develop a short film.
 
 It quickly gained momentum as the characters were developed through extensive creative collaboration within our team.
@@ -152,7 +154,7 @@ The score was chosen to highlight the beauty in sorrow, reflecting a sense of pr
         { label: "Role",   value: "Lead Animator" },
         { label: "Studio",   value: "The Furrow" },
         { label: "Client", value: "The Furrow Studio Project" },
-        { label: "Tools",  value: "After Effects, Illustrator" },
+        { label: "Tools",  value: "After Effects, Adobe Animate" },
       ],
     },
 
@@ -246,7 +248,7 @@ The story follows our main character Luis as he tries to clearly explain the com
     { label: "Role",   value: "Animator" },
     { label: "Studio",   value: "Colin Hesterly / Partizan" },
     { label: "Client", value: "Dell" },
-    { label: "Tools",  value: "After Effects" },
+    { label: "Tools",  value: "After Effects, Adobe Animate, Cinema 4D" },
   ],
 },
 
