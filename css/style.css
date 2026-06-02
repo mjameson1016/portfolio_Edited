@@ -120,9 +120,21 @@ img { display: block; width: 100%; }
   background: #ddd;
 }
 
-/* Doodles are not clickable */
+/* ---- Doodles: fully non-interactive ---- */
 .doodle-tile {
   cursor: default;
+}
+
+.doodle-tile:hover .project-tile-img {
+  transform: none !important;
+}
+
+.doodle-tile:hover .project-tile-overlay {
+  opacity: 0 !important;
+}
+
+.doodle-tile:hover .project-tile-label {
+  transform: none !important;
 }
 
 .project-tile-img {
