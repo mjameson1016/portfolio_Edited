@@ -5,6 +5,9 @@
 
 (function () {
 
+  let currentIllustrationIndex = 0;
+  let illustrationTiles = [];
+
   function applyConfig() {
     const c = CONFIG.colors;
     const f = CONFIG.fonts;
@@ -78,6 +81,7 @@
     const projects = category
       ? CONFIG.projects.filter(p => p.category === category)
       : CONFIG.projects;
+    grid.setAttribute('data-category', category || '');
     grid.innerHTML = projects.map(p => {
       const media = p.thumbnail
         ? `<img
@@ -87,10 +91,17 @@
   style="object-position:${p.thumbPosition || 'center center'};"
 >`
         : `<div class="project-tile-placeholder" style="background:${p.thumbColor||'#ccc'}"></div>`;
-const tileTag = p.category === 'illustration' ? 'div' : 'a';
-const tileAttrs = p.category === 'illustration'
-  ? `class="project-tile illustration-tile" data-image="${p.heroImage || p.thumbnail}"`
-  : `class="project-tile" href="work.html?id=${p.id}"`;
+const tileTag =
+  (p.category === 'illustration' || p.category === 'doodles')
+    ? 'div'
+    : 'a';
+
+const tileAttrs =
+  p.category === 'illustration'
+    ? `class="project-tile illustration-tile" data-image="${p.heroImage || p.thumbnail}"`
+    : p.category === 'doodles'
+      ? `class="project-tile doodle-tile"`
+      : `class="project-tile" href="work.html?id=${p.id}"`;
 
 return `
   <${tileTag} ${tileAttrs}>
@@ -219,22 +230,68 @@ return `
   const lightbox = document.getElementById('lightbox');
   const lightboxImage = document.getElementById('lightbox-image');
 
+document.addEventListener('click', (e) => {
+  const tile = e.target.closest('.illustration-tile');
+  if (!tile || !lightbox) return;
+
+  illustrationTiles = [
+    ...document.querySelectorAll('.illustration-tile')
+  ];
+
+  currentIllustrationIndex = illustrationTiles.indexOf(tile);
+
+  lightboxImage.src = tile.dataset.image;
+  lightbox.classList.remove('hidden');
+});
+
+lightbox?.addEventListener('click', () => {
+  lightbox.classList.add('hidden');
+});
+
+document.addEventListener('keydown', (e) => {
+  if (lightbox?.classList.contains('hidden')) return;
+
   document.addEventListener('click', (e) => {
-    const tile = e.target.closest('.illustration-tile');
-    if (!tile || !lightbox) return;
+  if (!lightbox || lightbox.classList.contains('hidden')) return;
 
-    lightboxImage.src = tile.dataset.image;
-    lightbox.classList.remove('hidden');
-  });
+  if (e.target.matches('.lightbox-next')) {
+    currentIllustrationIndex =
+      (currentIllustrationIndex + 1) % illustrationTiles.length;
 
-  lightbox?.addEventListener('click', () => {
+    lightboxImage.src =
+      illustrationTiles[currentIllustrationIndex].dataset.image;
+  }
+
+  if (e.target.matches('.lightbox-prev')) {
+    currentIllustrationIndex =
+      (currentIllustrationIndex - 1 + illustrationTiles.length) %
+      illustrationTiles.length;
+
+    lightboxImage.src =
+      illustrationTiles[currentIllustrationIndex].dataset.image;
+  }
+});
+
+  if (e.key === 'Escape') {
     lightbox.classList.add('hidden');
-  });
+  }
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      lightbox?.classList.add('hidden');
-    }
+  if (e.key === 'ArrowRight') {
+    currentIllustrationIndex =
+      (currentIllustrationIndex + 1) % illustrationTiles.length;
+
+    lightboxImage.src =
+      illustrationTiles[currentIllustrationIndex].dataset.image;
+  }
+
+  if (e.key === 'ArrowLeft') {
+    currentIllustrationIndex =
+      (currentIllustrationIndex - 1 + illustrationTiles.length) %
+      illustrationTiles.length;
+
+    lightboxImage.src =
+      illustrationTiles[currentIllustrationIndex].dataset.image;
+  }
   });
 });
 

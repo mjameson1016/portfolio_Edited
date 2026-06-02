@@ -58,9 +58,9 @@ const CONFIG = {
   //  FOOTER LINKS
   // ----------------------------------------------------------
   footer: [
-  { label: "Email",     href: "mailto:hello@mattjameson.co",            icon: "fa-solid fa-envelope" },
-  { label: "Instagram", href: "https://instagram.com/matthewdjameson",  icon: "fa-brands fa-instagram" },
-  { label: "Vimeo",     href: "https://vimeo.com/mattjameson",          icon: "fa-brands fa-vimeo-v" },
+  { label: "Email",     href: "mailto:hello@mattjameson.co",            icon: "fa-solid fa-square-envelope" },
+  { label: "Instagram", href: "https://instagram.com/matthewdjameson",  icon: "fa-brands fa-square-instagram" },
+  { label: "Vimeo",     href: "https://vimeo.com/mattjameson",          icon: "fa-brands fa-vimeo" },
 ],
 
   // ----------------------------------------------------------
@@ -115,7 +115,7 @@ I would love to chat with you about working together: <a href="mailto:hello@matt
       title:       "FrameRate — Brand Film",
       aspectRatio: "16 / 9",
       category:    "animation",
-      thumbnail:   "images/FrameRate_Thumb.jpg",
+      thumbnail:   "images/animthumbs/FrameRate_Thumb.jpg",
       thumbColor:  "#b9c9b8",
       heroImage:   "",
       videoUrl:    "https://framerate.tv/watch/702ecccb-f78e-4b8f-b73e-d97fa4c2728c",
@@ -136,7 +136,7 @@ I would love to chat with you about working together: <a href="mailto:hello@matt
       title:       "Sent — Short Film",
       aspectRatio: "2.35 / 1",
       category:    "animation",
-      thumbnail:   "images/Sent_Thumb.jpg",
+      thumbnail:   "images/animthumbs/Sent_Thumb.jpg",
       thumbColor:  "#c9c5be",
       heroImage:   "",
       videoUrl:    "https://player.vimeo.com/video/945966084",
@@ -161,7 +161,7 @@ The score was chosen to highlight the beauty in sorrow, reflecting a sense of pr
       title:       "Microsoft — ALT",
       aspectRatio: "16 / 9",
       category:    "animation",
-      thumbnail:   "images/Microsoft_Thumb.jpg",
+      thumbnail:   "images/animthumbs/Microsoft_Thumb.jpg",
       thumbColor:  "#b5bfc9",
       heroImage:   "",
       videoUrl:    "https://player.vimeo.com/video/424395428",
@@ -184,7 +184,7 @@ The story follows our main character Luis as he tries to clearly explain the com
       title:       "Google Pixel 4",
       aspectRatio: "16 / 9",
       category:    "animation",
-      thumbnail:   "images/Google_Thumb.jpg",
+      thumbnail:   "images/animthumbs/Google_Thumb.jpg",
       thumbColor:  "#c2b8c9",
       heroImage:   "",
       videoUrl:    "https://player.vimeo.com/video/377357796",
@@ -209,7 +209,7 @@ The story follows our main character Luis as he tries to clearly explain the com
       title:       "Welcome to Zelos",
       aspectRatio: "16 / 9",
       category:    "animation",
-      thumbnail:   "images/Zelos_Thumb.jpg",
+      thumbnail:   "images/animthumbs/Zelos_Thumb.jpg",
       thumbColor:  "#b9c9b8",
       heroImage:   "",
       videoUrl:    "https://player.vimeo.com/video/397480432",
@@ -228,7 +228,7 @@ The story follows our main character Luis as he tries to clearly explain the com
   title:       "Dell (Multiple Film Campaign)",
   aspectRatio: "16 / 9",
   category:    "animation",
-  thumbnail:   "images/Dell_Thumb.jpg",
+  thumbnail:   "images/animthumbs/Dell_Thumb.jpg",
   thumbColor:  "#c9c5be",
   heroImage:   "",
   videoUrl:    "https://player.vimeo.com/video/377362133",
@@ -250,187 +250,163 @@ The story follows our main character Luis as he tries to clearly explain the com
   ],
 },
 
+  // ----------------------------------------------------------
+  //  ILLUSTRATIONS
+  //
+  //  Each project has:
+  //    id          — unique slug, used in the URL (no spaces)
+  //    title       — shown on hover and on the project page
+  //    category    — matches a nav section ("animation" or "illustration")
+  //    thumbnail   — image shown in the grid. Path or URL.
+  //                  Use "" to show a color placeholder.
+  //    thumbColor  — placeholder color if no thumbnail (e.g. "#b5bfc9")
+  // ----------------------------------------------------------
+
     {
       id:          "train-cars",
       title:       "Train Cars",
       category:    "illustration",
-      thumbnail:   "images/260109_Train_iLLo_v16.jpg",
+      thumbnail:   "images/illustrations/260109_Train_iLLo_v16.jpg",
       thumbColor:  "#c9beb5",
-      heroImage:   "images/260109_Train_iLLo_v16.jpg",
-      videoUrl:    "",
-      description: `An editorial illustration series.
-Replace with your real project description.`,
-      details: [
-        { label: "Role",   value: "Illustrator" },
-        { label: "Year",   value: "2024" },
-        { label: "Client", value: "Self-initiated" },
-        { label: "Tools",  value: "Procreate, Photoshop" },
-      ],
+      heroImage:   "images/illustrations/260109_Train_iLLo_v16.jpg",
     },
 
     {
       id:          "indiana-jones",
       title:       "Indiana Jones",
       category:    "illustration",
-      thumbnail:   "images/250207_IndianaJones_iLLo_16.jpg",
+      thumbnail:   "images/illustrations/250207_IndianaJones_iLLo_16.jpg",
       thumbColor:  "#c9beb5",
-      heroImage:   "images/250207_IndianaJones_iLLo_16.jpg",
-      videoUrl:    "",
-      description: `An editorial illustration series.
-Replace with your real project description.`,
-      details: [
-        { label: "Role",   value: "Illustrator" },
-        { label: "Year",   value: "2024" },
-        { label: "Client", value: "Self-initiated" },
-        { label: "Tools",  value: "Procreate, Photoshop" },
-      ],
+      heroImage:   "images/illustrations/250207_IndianaJones_iLLo_16.jpg",
     },
 
     {
       id:          "christmas-town",
       title:       "Christmas Town",
       category:    "illustration",
-      thumbnail:   "images/251201_TheFurrow_Christmas_22_Car.jpg",
+      thumbnail:   "images/illustrations/251201_TheFurrow_Christmas_22_Car.jpg",
       thumbColor:  "#c9beb5",
-      heroImage:   "images/251201_TheFurrow_Christmas_22_Car.jpg",
-      videoUrl:    "",
-      description: `An editorial illustration series.
-Replace with your real project description.`,
-      details: [
-        { label: "Role",   value: "Illustrator" },
-        { label: "Year",   value: "2024" },
-        { label: "Client", value: "Self-initiated" },
-        { label: "Tools",  value: "Procreate, Photoshop" },
-      ],
+      heroImage:   "images/illustrations/251201_TheFurrow_Christmas_22_Car.jpg",
     },
 
     {
       id:          "runningback",
       title:       "Runningback",
       category:    "illustration",
-      thumbnail:   "images/250121_Football_RunningBack_iLLo_11_Eagles_ExtraCurves_02.jpg",
+      thumbnail:   "images/illustrations/250121_Football_RunningBack_iLLo_11_Eagles_ExtraCurves_02.jpg",
       thumbPosition: "80% center",
       thumbColor:  "#c9beb5",
-      heroImage:   "images/250121_Football_RunningBack_iLLo_11_Eagles_ExtraCurves_02.jpg",
-      videoUrl:    "",
-      description: `An editorial illustration series.
-Replace with your real project description.`,
-      details: [
-        { label: "Role",   value: "Illustrator" },
-        { label: "Year",   value: "2024" },
-        { label: "Client", value: "Self-initiated" },
-        { label: "Tools",  value: "Procreate, Photoshop" },
-      ],
+      heroImage:   "images/illustrations/250121_Football_RunningBack_iLLo_11_Eagles_ExtraCurves_02.jpg",
     },
 
     {
       id:          "pumpjack",
       title:       "Pumpjack",
       category:    "illustration",
-      thumbnail:   "images/250110_OilPumpJack_06_Noise.jpg",
+      thumbnail:   "images/illustrations/250110_OilPumpJack_06_Noise.jpg",
       thumbPosition: "center 30%",
       thumbColor:  "#c9beb5",
-      heroImage:   "images/250110_OilPumpJack_06_Noise.jpg",
-      videoUrl:    "",
-      description: `An editorial illustration series.
-Replace with your real project description.`,
-      details: [
-        { label: "Role",   value: "Illustrator" },
-        { label: "Year",   value: "2024" },
-        { label: "Client", value: "Self-initiated" },
-        { label: "Tools",  value: "Procreate, Photoshop" },
-      ],
+      heroImage:   "images/illustrations/250110_OilPumpJack_06_Noise.jpg",
     },
 
     {
       id:          "desert-tree",
       title:       "Desert Tree",
       category:    "illustration",
-      thumbnail:   "images/MJ_PS_DesertScene_07.jpg",
+      thumbnail:   "images/illustrations/MJ_PS_DesertScene_07.jpg",
       thumbColor:  "#c9beb5",
-      heroImage:   "images/MJ_PS_DesertScene_07.jpg",
-      videoUrl:    "",
-      description: `An editorial illustration series.
-Replace with your real project description.`,
-      details: [
-        { label: "Role",   value: "Illustrator" },
-        { label: "Year",   value: "2024" },
-        { label: "Client", value: "Self-initiated" },
-        { label: "Tools",  value: "Procreate, Photoshop" },
-      ],
+      heroImage:   "images/illustrations/MJ_PS_DesertScene_07.jpg",
     },
 
     {
       id:          "forest",
       title:       "Forest",
       category:    "illustration",
-      thumbnail:   "images/241125_Forest_illo_03.jpg",
+      thumbnail:   "images/illustrations/241125_Forest_illo_03.jpg",
       thumbColor:  "#c9beb5",
-      heroImage:   "images/241125_Forest_illo_03.jpg",
-      videoUrl:    "",
-      description: `An editorial illustration series.
-Replace with your real project description.`,
-      details: [
-        { label: "Role",   value: "Illustrator" },
-        { label: "Year",   value: "2024" },
-        { label: "Client", value: "Self-initiated" },
-        { label: "Tools",  value: "Procreate, Photoshop" },
-      ],
+      heroImage:   "images/illustrations/241125_Forest_illo_03.jpg",
     },
 
     {
       id:          "football-flyover",
       title:       "Football Flyover",
       category:    "illustration",
-      thumbnail:   "images/FootballFlyover_illo_08_Color-02.jpg",
+      thumbnail:   "images/illustrations/FootballFlyover_illo_08_Color-02.jpg",
       thumbColor:  "#c9beb5",
-      heroImage:   "images/FootballFlyover_illo_08_Color-02.jpg",
-      videoUrl:    "",
-      description: `An editorial illustration series.
-Replace with your real project description.`,
-      details: [
-        { label: "Role",   value: "Illustrator" },
-        { label: "Year",   value: "2024" },
-        { label: "Client", value: "Self-initiated" },
-        { label: "Tools",  value: "Procreate, Photoshop" },
-      ],
+      heroImage:   "images/illustrations/FootballFlyover_illo_08_Color-02.jpg",
     },
 
     {
       id:          "sent-rocket",
       title:       "Sent - Rocket",
       category:    "illustration",
-      thumbnail:   "images/Sent_Rocket+Parachute_MJ_04.jpg",
+      thumbnail:   "images/illustrations/Sent_Rocket+Parachute_MJ_04.jpg",
       thumbColor:  "#bec9c5",
-      heroImage:   "images/Sent_Rocket+Parachute_MJ_04.jpg",
-      videoUrl:    "",
-      description: `Illustration work for a brand identity project.`,
-      details: [
-        { label: "Role",   value: "Illustrator" },
-        { label: "Year",   value: "2023" },
-        { label: "Client", value: "Studio Name" },
-        { label: "Tools",  value: "Illustrator" },
-      ],
+      heroImage:   "images/illustrations/Sent_Rocket+Parachute_MJ_04.jpg",
     },
 
    {
       id:          "sailboat",
       title:       "Sailboat",
       category:    "illustration",
-      thumbnail:   "images/Sailboat_illo_07_Main.jpg",
+      thumbnail:   "images/illustrations/Sailboat_illo_07_Main.jpg",
       thumbColor:  "#c9beb5",
-      heroImage:   "images/Sailboat_illo_07_Main.jpg",
-      videoUrl:    "",
-      description: `An editorial illustration series.
-Replace with your real project description.`,
-      details: [
-        { label: "Role",   value: "Illustrator" },
-        { label: "Year",   value: "2024" },
-        { label: "Client", value: "Self-initiated" },
-        { label: "Tools",  value: "Procreate, Photoshop" },
-      ],
+      heroImage:   "images/illustrations/Sailboat_illo_07_Main.jpg",
     },
 
+  // ----------------------------------------------------------
+  //  DOODLES
+  //
+  //  Each doodle has:
+  //    id          — unique slug, used in the URL (no spaces)
+  //    title       — shown on hover and on the project page
+  //    thumbnail   — image shown in the grid. Path or URL.
+  //    hoverGif    - Gif shown on hover
+  // ----------------------------------------------------------
+
+{
+  id: "falling-man",
+  title: "Falling Man",
+  category: "doodles",
+  thumbnail: "images/doodles/FallingMan.gif",
+  hoverGif: "images/doodles/FallingMan.gif"
+},
+
+{
+  id: "shake-it-up",
+  title: "Shake It Up",
+  category: "doodles",
+  thumbnail: "images/doodles/TF_Christmas_SnowGlobe.gif",
+  hoverGif: "images/doodles/TF_Christmas_SnowGlobe.gif"
+},
+
+  {
+  id: "mechanic",
+  title: "Mechanic",
+  category: "doodles",
+  thumbnail: "images/doodles/FB_Organic_MJ_v014.gif",
+  hoverGif: "images/doodles/FB_Organic_MJ_v014.gif",
+  thumbPosition: "25% center"
+},
+
+{
+  id: "boxer",
+  title: "Boxer",
+  category: "doodles",
+  thumbnail: "images/doodles/200206_Boxer_v14.gif",
+  hoverGif: "images/doodles/200206_Boxer_v14.gif"
+},
+
+{
+  id: "bomb-drop",
+  title: "Bomb Drop",
+  category: "doodles",
+  thumbnail: "images/doodles/200310_Bomb+Drop-Blast_v04.gif",
+  hoverGif: "images/doodles/200310_Bomb+Drop-Blast_v04.gif"
+}
+   
+
   ], // end projects
+
 
 }; // end CONFIG

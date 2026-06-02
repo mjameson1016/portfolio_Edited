@@ -120,6 +120,11 @@ img { display: block; width: 100%; }
   background: #ddd;
 }
 
+/* Doodles are not clickable */
+.doodle-tile {
+  cursor: default;
+}
+
 .project-tile-img {
   width: 100%;
   height: 100%;
@@ -167,13 +172,14 @@ img { display: block; width: 100%; }
 
 /* ---- Section pages (About / Contact) ---- */
 .page-section {
-  padding: 5rem 0;
+  padding: 2rem 0;
   max-width: 680px;
 }
 
 .page-section h1 {
   font-family: var(--font-display);
   font-size: 2.5rem;
+  color: var(--color-muted);
   font-weight: var(--font-display-weight, 300);
   letter-spacing: 0.02em;
   margin-bottom: 2rem;
@@ -192,13 +198,24 @@ img { display: block; width: 100%; }
   margin-bottom: 2.5rem;
 }
 
+/* Contact page email */
 .contact-email {
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 300;
   display: inline-block;
   margin-bottom: 1rem;
-  border-bottom: 1px solid var(--color-text);
+  border-bottom: 1px solid var(--color-muted);
+}
+
+/* About page email (and any links in bio) */
+.about-text a {
+  color: var(--color-text);
+}
+
+.contact-email:hover,
+.about-text a:hover {
+  color: var(--color-muted);
 }
 
 /* ---- About layout ---- */
@@ -207,18 +224,19 @@ img { display: block; width: 100%; }
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: start;
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 .about-layout h1 {
   grid-column: 1 / -1;
   font-family: var(--font-display);
   font-size: 2.5rem;
+  color: var(--color-muted);
   font-weight: var(--font-display-weight, 300);
   letter-spacing: 0.02em;
   margin-bottom: 1rem;
 }
 .about-layout img {
-  width: 80%;
+  width: 70%;
 }
 .about-layout p {
   font-size: 1rem;
@@ -347,6 +365,32 @@ img { display: block; width: 100%; }
 
 .project-nav a:hover { color: var(--color-text); }
 
+/* ---- Doodles Masonry Layout ---- */
+#project-grid[data-category="doodles"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+#project-grid[data-category="doodles"] .project-tile {
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 4 / 3;
+}
+
+@media (max-width: 900px) {
+  #project-grid[data-category="doodles"] {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  #project-grid[data-category="doodles"] {
+    column-count: 1;
+  }
+}
+
 /* ---- Footer ---- */
 .site-footer {
   margin-top: auto;
@@ -361,7 +405,7 @@ img { display: block; width: 100%; }
 }
 
 .site-footer a {
-  color: #FF5722;
+  color: var(--color-text);
   transition: color 0.2s ease;
 }
 
@@ -370,7 +414,7 @@ img { display: block; width: 100%; }
 }
 
 .site-footer a:hover {
-  color: #000;
+  color: var(--color-muted);
 }
 
 
@@ -384,6 +428,34 @@ img { display: block; width: 100%; }
   justify-content: center;
   z-index: 9999;
   cursor: pointer;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  opacity: 0.7;
+  z-index: 10000;
+  transition: opacity 0.2s ease;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  opacity: 1;
+}
+
+.lightbox-prev {
+  left: 2rem;
+}
+
+.lightbox-next {
+  right: 2rem;
 }
 
 .lightbox img {
@@ -431,6 +503,13 @@ img { display: block; width: 100%; }
     gap: 2rem;
   }
 
+  .about-layout img {
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  display: block;
+}
+
   .site-footer {
     margin-top: 1rem;
     padding: 1.5rem 0;
@@ -443,4 +522,10 @@ img { display: block; width: 100%; }
   .site-footer a i {
     font-size: 1.25rem;
   }
+
+    /* Remove hover overlays on mobile */
+  .project-tile-overlay {
+    display: none;
+  }
+
 }
