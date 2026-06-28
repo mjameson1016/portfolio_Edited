@@ -119,6 +119,7 @@ I would love to chat with you about working together: <a href="mailto:hello@matt
       thumbColor:  "#b9c9b8",
       heroImage:   "",
       videoUrl:    "https://framerate.tv/watch/702ecccb-f78e-4b8f-b73e-d97fa4c2728c",
+      hidden:      false,    // ← hide or show page in grid
       description: `A brand film for the video and community platform, FrameRate.
       
       This platform is designed to give creatives a place to upload hi-quality work while helping to build the creative community.`,
@@ -139,8 +140,9 @@ I would love to chat with you about working together: <a href="mailto:hello@matt
       thumbnail:   "images/animthumbs/Sent_Thumb.jpg",
       thumbColor:  "#c9c5be",
       heroImage:   "",
-      videoUrl:    "https://player.vimeo.com/video/945966084",
-      extraVideos: ["https://player.vimeo.com/video/945966395",
+      videoUrl:    "https://framerate.tv/watch/0151975c-2f04-4315-9bd6-daf2a0f467b3",
+      hidden:      false,    // ← hide or show page in grid
+      extraVideos: ["https://framerate.tv/watch/21ffefb8-aa6b-4812-8023-5a1c64d89615",
       ],
       description: `This project began as a creative exploration of a story involving a scientist and a robot, and soon evolved into the opportunity to develop a short film.
 
@@ -159,6 +161,32 @@ The score was chosen to highlight the beauty in sorrow, reflecting a sense of pr
     },
 
     {
+      id:          "google-pixel",
+      title:       "Google Pixel 4",
+      aspectRatio: "16 / 9",
+      category:    "animation",
+      thumbnail:   "images/animthumbs/Google_Thumb.jpg",
+      thumbColor:  "#c2b8c9",
+      heroImage:   "",
+      videoUrl:    "https://framerate.tv/watch/ebd47543-b6aa-4625-a393-4a72143a1ab9",
+      hidden:      false,    // ← hide or show page in grid
+      extraVideos: [
+    "https://framerate.tv/watch/e49396be-c834-4224-97c9-e76716565168",
+  ],
+      description: `Motion work for the Google Pixel 4 launch campaign.
+      
+      I had the pleasure of working with the talented team at Buck to create a series of commercials to promote the new Google Pixel 4. 
+      Above is a 00:60 version as well as a 00:30 version (different visuals in each one).`,
+
+      details: [
+        { label: "Role",   value: "Motion Designer" },
+        { label: "Studio",   value: "Buck" },
+        { label: "Client", value: "Google" },
+        { label: "Tools",  value: "After Effects" },
+      ],
+    },  
+
+    {
       id:          "microsoft-alt",
       title:       "Microsoft — ALT",
       aspectRatio: "16 / 9",
@@ -166,7 +194,8 @@ The score was chosen to highlight the beauty in sorrow, reflecting a sense of pr
       thumbnail:   "images/animthumbs/Microsoft_Thumb.jpg",
       thumbColor:  "#b5bfc9",
       heroImage:   "",
-      videoUrl:    "https://player.vimeo.com/video/424395428",
+      videoUrl:    "https://framerate.tv/watch/116f63f5-25d0-4d21-9d93-8d3f4634c80b",
+      hidden:      false,    // ← hide or show page in grid
       description: `An animation created for Microsoft's ALT campaign.
 
 Reece Parker and Trifilm teamed up to direct this animated film for Microsoft. 
@@ -181,50 +210,6 @@ The story follows our main character Luis as he tries to clearly explain the com
       ],
     },
 
-    {
-      id:          "google-pixel",
-      title:       "Google Pixel 4",
-      aspectRatio: "16 / 9",
-      category:    "animation",
-      thumbnail:   "images/animthumbs/Google_Thumb.jpg",
-      thumbColor:  "#c2b8c9",
-      heroImage:   "",
-      videoUrl:    "https://player.vimeo.com/video/377357796",
-      extraVideos: [
-    "https://player.vimeo.com/video/377359118",
-  ],
-      description: `Motion work for the Google Pixel 4 launch campaign.
-      
-      I had the pleasure of working with the talented team at Buck to create a series of commercials to promote the new Google Pixel 4. 
-      Above is a 00:60 version as well as a 00:30 version (different visuals in each one).`,
-
-      details: [
-        { label: "Role",   value: "Motion Designer" },
-        { label: "Studio",   value: "Buck" },
-        { label: "Client", value: "Google" },
-        { label: "Tools",  value: "After Effects" },
-      ],
-    },
-
-    {
-      id:          "zelos",
-      title:       "Welcome to Zelos",
-      aspectRatio: "16 / 9",
-      category:    "animation",
-      thumbnail:   "images/animthumbs/Zelos_Thumb.jpg",
-      thumbColor:  "#b9c9b8",
-      heroImage:   "",
-      videoUrl:    "https://player.vimeo.com/video/397480432",
-      description: `Eido was asked to create an explainer video for Zelos, a new online gaming platform in which you can earn Zelos points that are redeemable between different games.`,
-
-      details: [
-        { label: "Role",   value: "Animator" },
-        { label: "Studio",   value: "Eido" },
-        { label: "Client", value: "Zelos" },
-        { label: "Tools",  value: "After Effects" },
-      ],
-    },
-
 {
   id:          "dell",
   title:       "Dell (Multiple Film Campaign)",
@@ -233,10 +218,11 @@ The story follows our main character Luis as he tries to clearly explain the com
   thumbnail:   "images/animthumbs/Dell_Thumb.jpg",
   thumbColor:  "#c9c5be",
   heroImage:   "",
-  videoUrl:    "https://player.vimeo.com/video/377362133",
+  videoUrl:    "https://framerate.tv/watch/1d83ba0d-d4e3-4547-a205-835912b6dd8d",
+  hidden:      false,    // ← hide or show page in grid
   extraVideos: [
-    "https://player.vimeo.com/video/377362882",
-    "https://player.vimeo.com/video/377363262",
+    "https://framerate.tv/watch/514e2320-227c-450d-9bcf-9983eee1263e",
+    "https://framerate.tv/watch/fc982993-f24e-46e3-aa88-b7efe1057a6c",
   ],
   description: `A campaign of Multiple films for Dell.
   
@@ -249,8 +235,32 @@ The story follows our main character Luis as he tries to clearly explain the com
     { label: "Studio",   value: "Colin Hesterly / Partizan" },
     { label: "Client", value: "Dell" },
     { label: "Tools",  value: "After Effects, Adobe Animate, Cinema 4D" },
-  ],
-},
+      ],
+    },
+
+{
+      id:          "uworld",
+      title:       "UWorld: College Prep",
+      aspectRatio: "16 / 9",
+      category:    "animation",
+      thumbnail:   "images/animthumbs/UWorld_Thumb.jpg",
+      thumbColor:  "#b5bfc9",
+      heroImage:   "",
+      videoUrl:    "https://framerate.tv/watch/11358cbd-5646-4757-882a-b4993ce6ecad",
+      hidden:      false,    // ← hide or show page in grid
+      description: `UWorld is a site that does high-stakes exam prep (SAT, ACT, MCAT). They wanted to refresh the look of their high-school and college focused curriculum to have a more illustrative look and feel. 
+
+We gladly took on the challenge of helping them rebrand that part of their website, as well as creating the video that explained their services. 
+
+It was a blast to direct and produce the project, and to work with such a great company!`,
+
+      details: [
+        { label: "Role",   value: "Creative Director, Animator" },
+        { label: "Studio",   value: "Jameson Creative" },
+        { label: "Client", value: "UWorld" },
+        { label: "Tools",  value: "After Effects, Adobe Animate" },
+      ],
+    },
 
   // ----------------------------------------------------------
   //  ILLUSTRATIONS
@@ -263,6 +273,16 @@ The story follows our main character Luis as he tries to clearly explain the com
   //                  Use "" to show a color placeholder.
   //    thumbColor  — placeholder color if no thumbnail (e.g. "#b5bfc9")
   // ----------------------------------------------------------
+
+    {
+      id:          "railroad-arms",
+      title:       "Railroad Arms",
+      category:    "illustration",
+      thumbnail:   "images/illustrations/260604_Railroad Crossing Arms_iLLo_07.jpg",
+      thumbPosition: "100% center",
+      thumbColor:  "#c9beb5",
+      heroImage:   "images/illustrations/260604_Railroad Crossing Arms_iLLo_07.jpg",
+    },
 
     {
       id:          "train-cars",

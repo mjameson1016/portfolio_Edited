@@ -78,9 +78,10 @@
   function buildGrid(category) {
     const grid = document.getElementById('project-grid');
     if (!grid) return;
-    const projects = category
+    const projects = (category
       ? CONFIG.projects.filter(p => p.category === category)
-      : CONFIG.projects;
+      : CONFIG.projects
+    ).filter(p => !p.hidden);
     grid.setAttribute('data-category', category || '');
     grid.innerHTML = projects.map(p => {
       const media = p.thumbnail
@@ -154,7 +155,7 @@ return `
   function buildWorkPage() {
     const params  = new URLSearchParams(window.location.search);
     const id      = params.get('id');
-    const project = CONFIG.projects.find(p => p.id === id);
+    const project = CONFIG.projects.find(p => p.id === id && !p.hidden);
     const container = document.getElementById('work-content');
     if (!container) return;
 
@@ -231,33 +232,24 @@ return `
   const lightboxImage = document.getElementById('lightbox-image');
 
 document.addEventListener('click', (e) => {
+  // Open lightbox when an illustration tile is clicked
   const tile = e.target.closest('.illustration-tile');
-  if (!tile || !lightbox) return;
+  if (tile && lightbox) {
+    illustrationTiles = [
+      ...document.querySelectorAll('.illustration-tile')
+    ];
+    currentIllustrationIndex = illustrationTiles.indexOf(tile);
+    lightboxImage.src = tile.dataset.image;
+    lightbox.classList.remove('hidden');
+    return;
+  }
 
-  illustrationTiles = [
-    ...document.querySelectorAll('.illustration-tile')
-  ];
-
-  currentIllustrationIndex = illustrationTiles.indexOf(tile);
-
-  lightboxImage.src = tile.dataset.image;
-  lightbox.classList.remove('hidden');
-});
-
-lightbox?.addEventListener('click', () => {
-  lightbox.classList.add('hidden');
-});
-
-document.addEventListener('keydown', (e) => {
-  if (lightbox?.classList.contains('hidden')) return;
-
-  document.addEventListener('click', (e) => {
+  // Next / prev buttons inside an open lightbox
   if (!lightbox || lightbox.classList.contains('hidden')) return;
 
   if (e.target.matches('.lightbox-next')) {
     currentIllustrationIndex =
       (currentIllustrationIndex + 1) % illustrationTiles.length;
-
     lightboxImage.src =
       illustrationTiles[currentIllustrationIndex].dataset.image;
   }
@@ -266,11 +258,20 @@ document.addEventListener('keydown', (e) => {
     currentIllustrationIndex =
       (currentIllustrationIndex - 1 + illustrationTiles.length) %
       illustrationTiles.length;
-
     lightboxImage.src =
       illustrationTiles[currentIllustrationIndex].dataset.image;
   }
 });
+
+lightbox?.addEventListener('click', (e) => {
+  // Only close if clicking the dark backdrop itself, not the image or buttons
+  if (e.target === lightbox) {
+    lightbox.classList.add('hidden');
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (lightbox?.classList.contains('hidden')) return;
 
   if (e.key === 'Escape') {
     lightbox.classList.add('hidden');
