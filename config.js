@@ -7,8 +7,8 @@ const CONFIG = {
   // ----------------------------------------------------------
   //  SITE IDENTITY
   // ----------------------------------------------------------
-  siteTitle: "Your Name",          // Browser tab title
-  logoText:  "Your Name",          // Name shown in top-left
+  siteTitle: "Matt Jameson",          // Browser tab title
+  logoText:  "Matt Jameson",          // Name shown in top-left
   logoImage: "images/Logo-Image.png",    // Brand image
 
   // ----------------------------------------------------------
