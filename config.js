@@ -74,7 +74,19 @@ const CONFIG = {
 
 I'm an animator, illustrator, and director living in Texas with my beautiful wife and daughters. To sum myself up, I am passionate about finding stories and telling them through moving illustrations. I also enjoy music, films, good friends, good food, and football. 
 
-I would love to chat with you about working together: <a href="mailto:hello@mattjameson.co">hello@mattjameson.co`,
+I would love to chat with you about working together: <a href="mailto:hello@mattjameson.co">hello@mattjameson.co</a>
+
+_________________
+
+Studios I’ve had the pleasure of working with include: 
+
+The Furrow, Buck, Oddfellows, Laundry, IV Animation, Colin Hesterly, Remade, Trifilm, Eido, Dash, Partizan, and others.
+
+_________________
+
+Brands I’ve had the pleasure of working with include: 
+
+Google, Facebook, Amazon, Apple, Microsoft, Target, Dell, VH1, Cisco, eBay, and others.`,
 
     photo: "images/About_Headshot.jpg",   // Optional: "images/about-photo.jpg"
   },
