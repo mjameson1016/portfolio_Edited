@@ -58,9 +58,9 @@ const CONFIG = {
   //  FOOTER LINKS
   // ----------------------------------------------------------
   footer: [
-  { label: "Email",     href: "mailto:hello@mattjameson.co",            icon: "fa-solid fa-square-envelope" },
-  { label: "Instagram", href: "https://instagram.com/matthewdjameson",  icon: "fa-brands fa-square-instagram" },
-  { label: "Vimeo",     href: "https://vimeo.com/mattjameson",          icon: "fa-brands fa-vimeo" },
+  { label: "Email",     href: "mailto:hello@mattjameson.co",                    icon: "fa-solid fa-square-envelope" },
+  { label: "Instagram", href: "https://instagram.com/matthewdjameson",          icon: "fa-brands fa-square-instagram" },
+  { label: "LinkedIn",  href: "https://www.linkedin.com/in/matthewdjameson/",   icon: "fa-brands fa-linkedin" },
 ],
 
   // ----------------------------------------------------------
