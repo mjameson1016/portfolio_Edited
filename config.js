@@ -287,6 +287,16 @@ It was a blast to direct and produce the project, and to work with such a great 
   // ----------------------------------------------------------
 
     {
+      id:          "stop-sign",
+      title:       "Stop Sign",
+      category:    "illustration",
+      thumbnail:   "images/illustrations/261015_Stop Sign & Cactus_11.jpg",
+      thumbPosition: "100% center",
+      thumbColor:  "#c9beb5",
+      heroImage:   "images/illustrations/261015_Stop Sign & Cactus_11.jpg",
+    },
+
+    {
       id:          "railroad-arms",
       title:       "Railroad Arms",
       category:    "illustration",
